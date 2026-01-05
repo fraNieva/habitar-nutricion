@@ -1,0 +1,38 @@
+{
+  // Usar Prettier como formateador por defecto
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // Formatear automáticamente al guardar
+  "editor.formatOnSave": true,
+
+  // Acciones de código al guardar (ESLint)
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
+  },
+
+  // Configuración específica para archivos de JS/TS/React
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // Validar Tailwind y ESLint en estos lenguajes
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+
+  // Si usas el plugin de Tailwind para Prettier (recomendado para el proyecto de Julieta)
+  "prettier.plugins": ["prettier-plugin-tailwindcss"]
+}
