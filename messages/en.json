@@ -8,5 +8,125 @@
     "services": "Services",
     "calculator": "Calculator",
     "book": "Start Your Change"
+  },
+  "HomePage": {
+    "hero": {
+      "badge": "CONSCIOUS NUTRITION & SUSTAINABLE HABITS",
+      "title": "Science for your body,",
+      "titleHighlight": "awareness",
+      "titleEnd": "for your process",
+      "description": "Nutrition and anthropometry with a human approach, designed to help you understand your body and sustain changes over time.",
+      "ctaPrimary": "Book your assessment",
+      "ctaSecondary": "Learn how I work",
+      "trust1": "ISAK Anthropometry",
+      "trust2": "Real and personalized processes"
+    },
+    "coaching": {
+      "title": "Why does",
+      "titleHighlight": "Nutritional Coaching",
+      "titleEnd": "make the difference?",
+      "description": "A plan doesn't work if it doesn't fit into your life. I work on habits, context, and your relationship with food so the process is possible, realistic, and sustainable.",
+      "habit": {
+        "title": "Habit Management",
+        "description": "Practical support to incorporate changes that last over time."
+      },
+      "emotional": {
+        "title": "Emotional Approach",
+        "description": "Understanding how, when, and why you eat is also part of the process."
+      },
+      "deliverable1": {
+        "title": "Monthly Action Plan",
+        "description": "Clear objectives, energy requirements, and simple guidelines adapted to your current situation."
+      },
+      "deliverable2": {
+        "title": "Visual Meal Guide",
+        "description": "Portions, combinations, and exchanges explained in a clear and flexible way."
+      },
+      "deliverable3": {
+        "title": "Follow-up and Adjustments",
+        "description": "Review of the process, sensations, adherence, and, if applicable, anthropometric measurements."
+      }
+    },
+    "services": {
+      "title": "Services designed for",
+      "titleHighlight": "your real life",
+      "description": "Combines science, empathy, and continuous follow-up to achieve changes that last over time.",
+      "service1": {
+        "title": "Changes — Habits and learning",
+        "description": "Process focused on learning to eat, improving your relationship with food, and building sustainable habits, without body measurements.",
+        "feature1": "Applied nutritional education",
+        "feature2": "Visual guides and flexible examples",
+        "feature3": "Monthly follow-up",
+        "cta": "I Want to Start"
+      },
+      "service2": {
+        "title": "Changes and Measurements",
+        "description": "In addition to habit work, we add anthropometric measurements to interpret your body evolution with real data.",
+        "feature1": "Everything from the Changes plan",
+        "feature2": "Anthropometric measurements",
+        "feature3": "Adjustments based on progress and feelings",
+        "cta": "It's for me"
+      },
+      "service3": {
+        "title": "Close Support",
+        "description": "A process with more support, more frequent contact, and continuous adjustments, ideal if you need more guidance and motivation.",
+        "feature1": "Closer follow-up",
+        "feature2": "Continuous adjustments",
+        "feature3": "With or without measurements",
+        "cta": "More information"
+      }
+    },
+    "calculator": {
+      "badge": "FREE TOOL",
+      "title": "Start with",
+      "titleHighlight": "clarity",
+      "description": "An initial estimate to understand how much energy your body needs according to your context and goals.",
+      "point1": "Guidance, not prescription",
+      "point2": "Ideal as a first step in the process"
+    },
+    "testimonials": {
+      "badge": "REAL STORIES",
+      "title": "Changes that",
+      "titleHighlight": "last",
+      "description": "Beyond the numbers, what matters is how you feel every day.",
+      "testimonial1": {
+        "quote": "I recovered my energy in training and learned to eat without anxiety. Julieta taught me that it's not about counting calories but understanding my body.",
+        "author": "Martina R.",
+        "role": "CrossFit Trainer"
+      },
+      "testimonial2": {
+        "quote": "I lost 18lbs in 4 months without going hungry. The best part was the emotional support, she didn't just give me a plan, she helped me change my mindset.",
+        "author": "Lucas M.",
+        "role": "Office worker"
+      },
+      "testimonial3": {
+        "quote": "The ISAK assessment was eye-opening. Understanding my real body composition motivated me to follow the plan with discipline and the results were incredible.",
+        "author": "Camila P.",
+        "role": "Amateur runner"
+      }
+    },
+    "cta": {
+      "title": "Your body deserves",
+      "titleHighlight": "a conscious and personalized process",
+      "description": "It's not about doing it perfectly, but about making it possible. I'll help you understand your body and build habits that last.",
+      "ctaPrimary": "Book assessment",
+      "ctaSecondary": "Learn how I work"
+    },
+    "footer": {
+      "title": "Julieta",
+      "description": "Nutritional coach specialized in habits and ISAK anthropometry. I support real processes with a conscious and sustainable approach.",
+      "navigation": "Navigation",
+      "contact": "Contact",
+      "links": {
+        "home": "Home",
+        "services": "Services",
+        "method": "Method",
+        "calculator": "Calculator",
+        "contactLink": "Contact"
+      },
+      "copyright": "Julieta - Sports Nutrition. All rights reserved.",
+      "privacy": "Privacy",
+      "terms": "Terms"
+    }
   }
 }

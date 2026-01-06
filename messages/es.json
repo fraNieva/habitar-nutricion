@@ -8,5 +8,125 @@
     "services": "Servicios",
     "calculator": "Calculadora",
     "book": "Comienza Tu Cambio"
+  },
+  "HomePage": {
+    "hero": {
+      "badge": "NUTRICIÓN CONSCIENTE & HÁBITOS SOSTENIBLES",
+      "title": "Ciencia para tu cuerpo,",
+      "titleHighlight": "consciencia",
+      "titleEnd": "para tu proceso",
+      "description": "Nutrición y antropometría con un enfoque humano, pensado para que entiendas tu cuerpo y sostengas los cambios en el tiempo.",
+      "ctaPrimary": "Reserva tu evaluación",
+      "ctaSecondary": "Conocé cómo trabajo",
+      "trust1": "Antropometría ISAK",
+      "trust2": "Procesos reales y personalizados"
+    },
+    "coaching": {
+      "title": "¿Por qué el",
+      "titleHighlight": "Coaching Nutricional",
+      "titleEnd": "hace la diferencia?",
+      "description": "Un plan no funciona si no encaja en tu vida. Trabajo sobre hábitos, contexto y relación con la comida para que el proceso sea posible, realista y sostenible.",
+      "habit": {
+        "title": "Gestión de Hábitos",
+        "description": "Acompañamiento práctico para incorporar cambios que se mantengan en el tiempo."
+      },
+      "emotional": {
+        "title": "Enfoque Emocional",
+        "description": "Entender cómo, cuándo y por qué comés también es parte del proceso."
+      },
+      "deliverable1": {
+        "title": "Plan de Acción Mensual",
+        "description": "Objetivos claros, requerimientos energéticos y lineamientos simples adaptados a tu momento."
+      },
+      "deliverable2": {
+        "title": "Guía Visual de Comidas",
+        "description": "Porciones, combinaciones e intercambios explicados de forma clara y flexible."
+      },
+      "deliverable3": {
+        "title": "Seguimiento y Ajustes",
+        "description": "Revisión del proceso, sensaciones, adherencia y, si corresponde, mediciones antropométricas."
+      }
+    },
+    "services": {
+      "title": "Servicios diseñados para",
+      "titleHighlight": "tu vida real",
+      "description": "Combina ciencia, empatía y seguimiento continuo para lograr cambios que se mantengan en el tiempo.",
+      "service1": {
+        "title": "Cambios — Hábitos y aprendizaje",
+        "description": "Proceso enfocado en aprender a comer, mejorar la relación con la comida y construir hábitos sostenibles, sin mediciones corporales.",
+        "feature1": "Educación nutricional aplicada",
+        "feature2": "Guías visuales y ejemplos flexibles",
+        "feature3": "Seguimiento mensual",
+        "cta": "Quiero Empezar"
+      },
+      "service2": {
+        "title": "Cambios y Medidas",
+        "description": "Además del trabajo de hábitos, sumamos mediciones antropométricas para interpretar tu evolución corporal con datos reales.",
+        "feature1": "Todo lo del plan Cambios",
+        "feature2": "Mediciones antropométricas",
+        "feature3": "Ajustes según evolución y sensaciones",
+        "cta": "Es para mi"
+      },
+      "service3": {
+        "title": "Acompañamiento Cercano",
+        "description": "Un proceso con mayor sostén, contacto más frecuente y ajustes continuos, ideal si necesitás más guía y motivación.",
+        "feature1": "Seguimiento más cercano",
+        "feature2": "Ajustes continuos",
+        "feature3": "Con o sin mediciones",
+        "cta": "Más información"
+      }
+    },
+    "calculator": {
+      "badge": "HERRAMIENTA GRATUITA",
+      "title": "Comienza con ",
+      "titleHighlight": "claridad",
+      "description": "Una estimación inicial para entender cuánta energía necesita tu cuerpo según tu contexto y objetivos.",
+      "point1": "Orientativa, no prescriptiva",
+      "point2": "Ideal como primer paso del proceso"
+    },
+    "testimonials": {
+      "badge": "HISTORIAS REALES",
+      "title": "Cambios que ",
+      "titleHighlight": "se sostienen",
+      "description": "Más allá de los números, lo que importa es cómo te sientes cada día.",
+      "testimonial1": {
+        "quote": "Recuperé mi energía en los entrenamientos y aprendí a comer sin ansiedad. Julieta me enseñó que no se trata de contar calorías sino de entender mi cuerpo.",
+        "author": "Martina R.",
+        "role": "Entrena Crossfit"
+      },
+      "testimonial2": {
+        "quote": "Bajé 8kg en 4 meses sin pasar hambre. Lo mejor fue el acompañamiento emocional, no solo me dio un plan, me ayudó a cambiar mi mentalidad.",
+        "author": "Lucas M.",
+        "role": "Trabajo de oficina"
+      },
+      "testimonial3": {
+        "quote": "La evaluación ISAK fue reveladora. Entender mi composición corporal real me motivó a seguir el plan con disciplina y los resultados fueron increíbles.",
+        "author": "Camila P.",
+        "role": "Corredora amateur"
+      }
+    },
+    "cta": {
+      "title": "Tu cuerpo merece ",
+      "titleHighlight": "un proceso consciente y personalizado",
+      "description": "No se trata de hacerlo perfecto, sino de hacerlo posible. Te acompaño a entender tu cuerpo y construir hábitos que se sostengan.",
+      "ctaPrimary": "Reserva evaluación",
+      "ctaSecondary": "Conocé cómo trabajo"
+    },
+    "footer": {
+      "title": "Julieta",
+      "description": "Coach nutricional especializada en hábitos y antropometría ISAK. Acompaño procesos reales con enfoque consciente y sostenible.",
+      "navigation": "Navegación",
+      "contact": "Contacto",
+      "links": {
+        "home": "Inicio",
+        "services": "Servicios",
+        "method": "Método",
+        "calculator": "Calculadora",
+        "contactLink": "Contacto"
+      },
+      "copyright": "Julieta - Nutrición Deportiva. Todos los derechos reservados.",
+      "privacy": "Privacidad",
+      "terms": "Términos"
+    }
   }
 }

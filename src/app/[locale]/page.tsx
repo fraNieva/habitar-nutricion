@@ -8,8 +8,11 @@ import {
   MessageCircle,
   Star,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function Home() {
+  const t = useTranslations("HomePage");
+
   return (
     <div className="flex-1 min-h-screen flex-col bg-background selection:bg-primary/20 font-sans">
       {/* Hero Section: Centered & Warm */}
@@ -21,18 +24,19 @@ export default function Home() {
         <div className="container mx-auto px-6 relative z-10 text-center">
           <div className="max-w-4xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-1000">
             <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary font-bold text-sm tracking-wide">
-              NUTRICIÓN CONSCIENTE & HÁBITOS SOSTENIBLES
+              {t("hero.badge")}
             </span>
 
             <h1 className="text-5xl md:text-7xl font-serif font-bold leading-[1.1] text-foreground tracking-tight">
-              Ciencia para tu cuerpo, <br />
-              <span className="text-primary italic">consciencia</span> para tu
-              proceso
+              {t("hero.title")} <br />
+              <span className="text-primary italic">
+                {t("hero.titleHighlight")}
+              </span>{" "}
+              {t("hero.titleEnd")}
             </h1>
 
             <p className="text-xl md:text-2xl text-foreground/70 max-w-2xl mx-auto leading-relaxed">
-              Nutrición y antropometría con un enfoque humano, pensado para que
-              entiendas tu cuerpo y sostengas los cambios en el tiempo.
+              {t("hero.description")}
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
@@ -40,14 +44,14 @@ export default function Home() {
                 size="lg"
                 className="w-full sm:w-auto rounded-full h-16 px-10 text-lg font-bold bg-primary text-white hover:bg-primary/90 shadow-xl shadow-primary/25"
               >
-                Reserva tu evaluación
+                {t("hero.ctaPrimary")}
               </Button>
               <Button
                 variant="outline"
                 size="lg"
                 className="w-full sm:w-auto rounded-full h-16 px-10 text-lg font-bold border-2 border-primary/20 text-foreground hover:bg-primary/5 bg-transparent"
               >
-                Conocé cómo trabajo
+                {t("hero.ctaSecondary")}
               </Button>
             </div>
 
@@ -55,13 +59,11 @@ export default function Home() {
             <div className="pt-12 flex flex-wrap items-center justify-center gap-8 text-foreground/50">
               <div className="flex items-center gap-2">
                 <Star className="w-5 h-5 fill-primary text-primary" />
-                <span className="font-bold text-sm">Antropometría ISAK</span>
+                <span className="font-bold text-sm">{t("hero.trust1")}</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-5 h-5 text-primary" />
-                <span className="font-bold text-sm">
-                  Procesos reales y personalizados
-                </span>
+                <span className="font-bold text-sm">{t("hero.trust2")}</span>
               </div>
             </div>
           </div>
@@ -78,14 +80,14 @@ export default function Home() {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground leading-tight">
-                  ¿Por qué el{" "}
-                  <span className="text-primary">Coaching Nutricional</span>{" "}
-                  hace la diferencia?
+                  {t("coaching.title")}{" "}
+                  <span className="text-primary">
+                    {t("coaching.titleHighlight")}
+                  </span>{" "}
+                  {t("coaching.titleEnd")}
                 </h2>
                 <p className="text-lg text-foreground/70 leading-relaxed">
-                  Un plan no funciona si no encaja en tu vida. Trabajo sobre
-                  hábitos, contexto y relación con la comida para que el proceso
-                  sea posible, realista y sostenible.
+                  {t("coaching.description")}
                 </p>
               </div>
 
@@ -93,14 +95,14 @@ export default function Home() {
                 {[
                   {
                     key: 1,
-                    title: "Gestión de Hábitos",
-                    desc: "Acompañamiento práctico para incorporar cambios que se mantengan en el tiempo.",
+                    title: t("coaching.habit.title"),
+                    desc: t("coaching.habit.description"),
                     icon: <Activity className="w-6 h-6 text-primary" />,
                   },
                   {
                     key: 2,
-                    title: "Enfoque Emocional",
-                    desc: "Entender cómo, cuándo y por qué comés también es parte del proceso.",
+                    title: t("coaching.emotional.title"),
+                    desc: t("coaching.emotional.description"),
                     icon: <MessageCircle className="w-6 h-6 text-primary" />,
                   },
                 ].map((item) => (
@@ -133,12 +135,11 @@ export default function Home() {
                       1
                     </div>
                     <h4 className="font-serif font-bold text-xl">
-                      Plan de Acción Mensual
+                      {t("coaching.deliverable1.title")}
                     </h4>
                   </div>
                   <p className="text-foreground/60">
-                    Objetivos claros, requerimientos energéticos y lineamientos
-                    simples adaptados a tu momento.
+                    {t("coaching.deliverable1.description")}
                   </p>
                 </Card>
 
@@ -148,12 +149,11 @@ export default function Home() {
                       2
                     </div>
                     <h4 className="font-serif font-bold text-xl">
-                      Guía Visual de Comidas
+                      {t("coaching.deliverable2.title")}
                     </h4>
                   </div>
                   <p className="opacity-80">
-                    Porciones, combinaciones e intercambios explicados de forma
-                    clara y flexible.
+                    {t("coaching.deliverable2.description")}
                   </p>
                 </Card>
 
@@ -163,12 +163,11 @@ export default function Home() {
                       3
                     </div>
                     <h4 className="font-serif font-bold text-xl">
-                      Seguimiento y Ajustes
+                      {t("coaching.deliverable3.title")}
                     </h4>
                   </div>
                   <p className="text-foreground/60">
-                    Revisión del proceso, sensaciones, adherencia y, si
-                    corresponde, mediciones antropométricas.
+                    {t("coaching.deliverable3.description")}
                   </p>
                 </Card>
               </div>
@@ -182,12 +181,13 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground">
-              Servicios diseñados para{" "}
-              <span className="text-primary italic">tu vida real</span>
+              {t("services.title")}{" "}
+              <span className="text-primary italic">
+                {t("services.titleHighlight")}
+              </span>
             </h2>
             <p className="text-lg text-foreground/70">
-              Combina ciencia, empatía y seguimiento continuo para lograr
-              cambios que se mantengan en el tiempo.
+              {t("services.description")}
             </p>
           </div>
 
@@ -198,18 +198,16 @@ export default function Home() {
                 <Activity className="w-8 h-8 text-primary" />
               </div>
               <h3 className="text-2xl font-serif font-bold text-foreground mb-3">
-                Cambios — Hábitos y aprendizaje
+                {t("services.service1.title")}
               </h3>
               <p className="text-foreground/60 leading-relaxed mb-6">
-                Proceso enfocado en aprender a comer, mejorar la relación con la
-                comida y construir hábitos sostenibles, sin mediciones
-                corporales.
+                {t("services.service1.description")}
               </p>
               <ul className="space-y-2 mb-6">
                 {[
-                  { text: "Educación nutricional aplicada", id: 1 },
-                  { text: "Guías visuales y ejemplos flexibles", id: 2 },
-                  { text: "Seguimiento mensual", id: 3 },
+                  { text: t("services.service1.feature1"), id: 1 },
+                  { text: t("services.service1.feature2"), id: 2 },
+                  { text: t("services.service1.feature3"), id: 3 },
                 ].map((item) => (
                   <li
                     key={item.id}
@@ -221,7 +219,7 @@ export default function Home() {
                 ))}
               </ul>
               <Button className="w-full rounded-full bg-primary text-white hover:bg-primary/90 font-bold">
-                Quiero Empezar
+                {t("services.service1.cta")}
               </Button>
             </Card>
 
@@ -231,18 +229,16 @@ export default function Home() {
                 <Star className="w-8 h-8 text-primary" />
               </div>
               <h3 className="text-2xl font-serif font-bold text-foreground mb-3">
-                Cambios y Medidas
+                {t("services.service2.title")}
               </h3>
               <p className="text-foreground/60 leading-relaxed mb-6">
-                Además del trabajo de hábitos, sumamos mediciones
-                antropométricas para interpretar tu evolución corporal con datos
-                reales.
+                {t("services.service2.description")}
               </p>
               <ul className="space-y-2 mb-6">
                 {[
-                  { text: "Todo lo del plan Cambios", id: 1 },
-                  { text: "Mediciones antropométricas", id: 2 },
-                  { text: "Ajustes según evolución y sensaciones", id: 3 },
+                  { text: t("services.service2.feature1"), id: 1 },
+                  { text: t("services.service2.feature2"), id: 2 },
+                  { text: t("services.service2.feature3"), id: 3 },
                 ].map((item) => (
                   <li
                     key={item.id}
@@ -254,7 +250,7 @@ export default function Home() {
                 ))}
               </ul>
               <Button className="w-full rounded-full bg-primary text-white hover:bg-primary/90 font-bold shadow-lg shadow-primary/30">
-                Es para mi
+                {t("services.service2.cta")}
               </Button>
             </Card>
 
@@ -264,17 +260,16 @@ export default function Home() {
                 <MessageCircle className="w-8 h-8 text-primary" />
               </div>
               <h3 className="text-2xl font-serif font-bold text-foreground mb-3">
-                Acompañamiento Cercano
+                {t("services.service3.title")}
               </h3>
               <p className="text-foreground/60 leading-relaxed mb-6">
-                Un proceso con mayor sostén, contacto más frecuente y ajustes
-                continuos, ideal si necesitás más guía y motivación.
+                {t("services.service3.description")}
               </p>
               <ul className="space-y-2 mb-6">
                 {[
-                  { text: "Seguimiento más cercano", id: 1 },
-                  { text: "Ajustes continuos", id: 2 },
-                  { text: "Con o sin mediciones", id: 3 },
+                  { text: t("services.service3.feature1"), id: 1 },
+                  { text: t("services.service3.feature2"), id: 2 },
+                  { text: t("services.service3.feature3"), id: 3 },
                 ].map((item) => (
                   <li
                     key={item.id}
@@ -289,7 +284,7 @@ export default function Home() {
                 variant="outline"
                 className="w-full rounded-full border-2 border-primary/30 text-foreground hover:bg-primary/5 font-bold bg-transparent"
               >
-                Más información
+                {t("services.service3.cta")}
               </Button>
             </Card>
           </div>
@@ -303,15 +298,17 @@ export default function Home() {
             <div className="space-y-8">
               <div className="space-y-4">
                 <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary font-bold text-sm tracking-wide">
-                  HERRAMIENTA GRATUITA
+                  {t("calculator.badge")}
                 </span>
                 <h2 className="text-4xl md:text-6xl font-serif font-bold text-foreground leading-tight">
-                  Comienza con <br />
-                  <span className="text-primary italic">claridad</span>
+                  {t("calculator.title")}
+                  <br />
+                  <span className="text-primary italic">
+                    {t("calculator.titleHighlight")}
+                  </span>
                 </h2>
                 <p className="text-xl text-foreground/70 leading-relaxed max-w-md">
-                  Una estimación inicial para entender cuánta energía necesita
-                  tu cuerpo según tu contexto y objetivos.
+                  {t("calculator.description")}
                 </p>
               </div>
 
@@ -320,17 +317,13 @@ export default function Home() {
                   <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
                     <ChevronRight className="w-6 h-6 text-primary" />
                   </div>
-                  <p className="text-foreground/60">
-                    Orientativa, no prescriptiva
-                  </p>
+                  <p className="text-foreground/60">{t("calculator.point1")}</p>
                 </div>
                 <div className="flex gap-4 items-start">
                   <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
                     <ChevronRight className="w-6 h-6 text-primary" />
                   </div>
-                  <p className="text-foreground/60">
-                    Ideal como primer paso del proceso
-                  </p>
+                  <p className="text-foreground/60">{t("calculator.point2")}</p>
                 </div>
               </div>
             </div>
@@ -350,37 +343,35 @@ export default function Home() {
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
             <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary font-bold text-sm tracking-wide">
-              HISTORIAS REALES
+              {t("testimonials.badge")}
             </span>
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground">
-              Cambios que{" "}
-              <span className="text-primary italic">se sostienen</span>
+              {t("testimonials.title")}
+              <span className="text-primary italic">
+                {t("testimonials.titleHighlight")}
+              </span>
             </h2>
             <p className="text-lg text-foreground/70">
-              Más allá de los números, lo que importa es cómo te sientes cada
-              día.
+              {t("testimonials.description")}
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               {
-                quote:
-                  "Recuperé mi energía en los entrenamientos y aprendí a comer sin ansiedad. Julieta me enseñó que no se trata de contar calorías sino de entender mi cuerpo.",
-                author: "Martina R.",
-                role: "Entrena Crossfit",
+                quote: t("testimonials.testimonial1.quote"),
+                author: t("testimonials.testimonial1.author"),
+                role: t("testimonials.testimonial1.role"),
               },
               {
-                quote:
-                  "Bajé 8kg en 4 meses sin pasar hambre. Lo mejor fue el acompañamiento emocional, no solo me dio un plan, me ayudó a cambiar mi mentalidad.",
-                author: "Lucas M.",
-                role: "Trabajo de oficina",
+                quote: t("testimonials.testimonial2.quote"),
+                author: t("testimonials.testimonial2.author"),
+                role: t("testimonials.testimonial2.role"),
               },
               {
-                quote:
-                  "La evaluación ISAK fue reveladora. Entender mi composición corporal real me motivó a seguir el plan con disciplina y los resultados fueron increíbles.",
-                author: "Camila P.",
-                role: "Corredora amateur",
+                quote: t("testimonials.testimonial3.quote"),
+                author: t("testimonials.testimonial3.author"),
+                role: t("testimonials.testimonial3.role"),
               },
             ].map((testimonial) => (
               <Card
@@ -419,29 +410,27 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <h2 className="text-4xl md:text-6xl font-serif font-bold text-foreground leading-tight">
-              Tu cuerpo merece <br />
+              {t("cta.title")}
               <span className="text-primary italic">
-                un proceso consciente y personalizado
+                {t("cta.titleHighlight")}
               </span>
             </h2>
             <p className="text-xl text-foreground/70 max-w-2xl mx-auto leading-relaxed">
-              No se trata de hacerlo perfecto, sino de hacerlo posible. Te
-              acompaño a entender tu cuerpo y construir hábitos que se
-              sostengan.
+              {t("cta.description")}
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
               <Button
                 size="lg"
                 className="w-full sm:w-auto rounded-full h-16 px-12 text-lg font-bold bg-primary text-white hover:bg-primary/90 shadow-xl shadow-primary/25"
               >
-                Reserva evaluación
+                {t("cta.ctaPrimary")}
               </Button>
               <Button
                 variant="outline"
                 size="lg"
                 className="w-full sm:w-auto rounded-full h-16 px-12 text-lg font-bold border-2 border-primary/20 text-foreground hover:bg-white bg-transparent"
               >
-                Conocé cómo trabajo
+                {t("cta.ctaSecondary")}
               </Button>
             </div>
           </div>
@@ -464,11 +453,10 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-12 mb-12">
             <div className="md:col-span-2 space-y-4">
               <h3 className="text-2xl font-serif font-bold text-foreground">
-                Julieta<span className="text-primary">.</span>
+                {t("footer.title")}
               </h3>
               <p className="text-foreground/60 leading-relaxed max-w-sm">
-                Coach nutricional especializada en hábitos y antropometría ISAK.
-                Acompaño procesos reales con enfoque consciente y sostenible.
+                {t("footer.description")}
               </p>
               <div className="flex gap-3">
                 {["instagram", "linkedin", "whatsapp"].map((social) => (
@@ -486,15 +474,15 @@ export default function Home() {
 
             <div className="space-y-4">
               <h4 className="font-bold text-foreground uppercase text-sm tracking-wider">
-                Navegación
+                {t("footer.navigation")}
               </h4>
               <ul className="space-y-2">
                 {[
-                  "Inicio",
-                  "Servicios",
-                  "Método",
-                  "Calculadora",
-                  "Contacto",
+                  t("footer.links.home"),
+                  t("footer.links.services"),
+                  t("footer.links.method"),
+                  t("footer.links.calculator"),
+                  t("footer.links.contactLink"),
                 ].map((link) => (
                   <li key={link}>
                     <a
@@ -510,7 +498,7 @@ export default function Home() {
 
             <div className="space-y-4">
               <h4 className="font-bold text-foreground uppercase text-sm tracking-wider">
-                Contacto
+                {t("footer.links.contactLink")}
               </h4>
               <ul className="space-y-2 text-foreground/60">
                 <li>hola@julieta.com</li>
@@ -522,15 +510,14 @@ export default function Home() {
 
           <div className="border-t border-primary/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-foreground/50">
             <p>
-              © {new Date().getFullYear()} Julieta - Nutrición Deportiva. Todos
-              los derechos reservados.
+              © {new Date().getFullYear()} {t("footer.copyright")}
             </p>
             <div className="flex gap-6">
               <a href="#" className="hover:text-primary transition-colors">
-                Privacidad
+                {t("footer.privacy")}
               </a>
               <a href="#" className="hover:text-primary transition-colors">
-                Términos
+                {t("footer.terms")}
               </a>
             </div>
           </div>

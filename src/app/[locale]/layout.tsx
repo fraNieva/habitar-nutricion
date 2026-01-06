@@ -23,7 +23,7 @@ const playfair = Playfair_Display({
 
 // Metadata Base (SEO)
 export const metadata: Metadata = {
-  title: "Julieta | Nutrición Deportiva & Antropometría",
+  title: "Habitar Nutrición",
   description:
     "Coaching nutricional y análisis antropométrico para potenciar tu rendimiento y bienestar.",
 };
