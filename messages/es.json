@@ -2,5 +2,11 @@
   "Index": {
     "title": "Ciencia para tu cuerpo, coaching para tu vida",
     "calculator": "Calculadora de Macros"
+  },
+  "Navbar": {
+    "method": "Método",
+    "services": "Servicios",
+    "calculator": "Calculadora",
+    "book": "Comienza Tu Cambio"
   }
 }

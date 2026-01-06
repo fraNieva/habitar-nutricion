@@ -34,5 +34,8 @@
   ],
 
   // Si usas el plugin de Tailwind para Prettier (recomendado para el proyecto de Julieta)
-  "prettier.plugins": ["prettier-plugin-tailwindcss"]
+  "prettier.plugins": ["prettier-plugin-tailwindcss"],
+
+  // Fix Tailwind CSS v4 @apply and other at-rules
+  "css.lint.unknownAtRules": "ignore"
 }
