@@ -34,7 +34,7 @@ export function Navbar() {
             {t("services")}
           </Link>
           <Link
-            href="/calculator"
+            href="#calculator"
             className="hover:text-primary transition-colors"
           >
             {t("calculator")}
