@@ -7,7 +7,8 @@
     "method": "Método",
     "services": "Servicios",
     "calculator": "Calculadora",
-    "book": "Comienza Tu Cambio"
+    "book": "Comienza Tu Cambio",
+    "changeLanguage": "Cambiar idioma"
   },
   "HomePage": {
     "hero": {
