@@ -75,7 +75,7 @@ export default function Home() {
 
       {/* The 'Coaching Hook' Section: Empathy + Precision */}
       <section
-        id="metodo"
+        id="method"
         className="py-24 bg-white/50 relative overflow-hidden"
       >
         <div className="container mx-auto px-6">
@@ -163,7 +163,7 @@ export default function Home() {
       </section>
 
       {/* Services Grid Section */}
-      <section id="servicios" className="py-24 bg-background relative">
+      <section id="services" className="py-24 bg-background relative">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground">
