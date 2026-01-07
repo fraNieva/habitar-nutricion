@@ -24,11 +24,11 @@ export function Navbar() {
 
         {/* MENÚ DE ESCRITORIO (Oculto en móvil) */}
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-muted-foreground">
-          <Link href="/method" className="hover:text-primary transition-colors">
+          <Link href="#method" className="hover:text-primary transition-colors">
             {t("method")}
           </Link>
           <Link
-            href="/services"
+            href="#services"
             className="hover:text-primary transition-colors"
           >
             {t("services")}

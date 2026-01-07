@@ -1,13 +1,13 @@
 import { MacroCalculator } from "@/components/macro-calculator";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import {
-  Activity,
-  CheckCircle2,
-  ChevronRight,
-  MessageCircle,
-  Star,
-} from "lucide-react";
+import { Icon } from "@/components/ui/icon";
+import { calculatorPoints } from "@/data/home/calculator";
+import { coachingFeatures, deliverables } from "@/data/home/coaching";
+import { trustIndicators } from "@/data/home/hero";
+import { services } from "@/data/home/services";
+import { testimonials } from "@/data/home/testimonials";
+import { ChevronRight, MessageCircle, Star } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 export default function Home() {
@@ -57,14 +57,17 @@ export default function Home() {
 
             {/* Trust Indicators */}
             <div className="pt-12 flex flex-wrap items-center justify-center gap-8 text-foreground/50">
-              <div className="flex items-center gap-2">
-                <Star className="w-5 h-5 fill-primary text-primary" />
-                <span className="font-bold text-sm">{t("hero.trust1")}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-5 h-5 text-primary" />
-                <span className="font-bold text-sm">{t("hero.trust2")}</span>
-              </div>
+              {trustIndicators.map((indicator) => (
+                <div key={indicator.id} className="flex items-center gap-2">
+                  <Icon
+                    name={indicator.icon}
+                    className="w-5 h-5 fill-primary text-primary"
+                  />
+                  <span className="font-bold text-sm">
+                    {t(indicator.translationKey)}
+                  </span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -72,7 +75,7 @@ export default function Home() {
 
       {/* The 'Coaching Hook' Section: Empathy + Precision */}
       <section
-        id="metodo"
+        id="method"
         className="py-24 bg-white/50 relative overflow-hidden"
       >
         <div className="container mx-auto px-6">
@@ -92,33 +95,23 @@ export default function Home() {
               </div>
 
               <div className="grid gap-6">
-                {[
-                  {
-                    key: 1,
-                    title: t("coaching.habit.title"),
-                    desc: t("coaching.habit.description"),
-                    icon: <Activity className="w-6 h-6 text-primary" />,
-                  },
-                  {
-                    key: 2,
-                    title: t("coaching.emotional.title"),
-                    desc: t("coaching.emotional.description"),
-                    icon: <MessageCircle className="w-6 h-6 text-primary" />,
-                  },
-                ].map((item) => (
+                {coachingFeatures.map((feature) => (
                   <div
-                    key={item.key}
+                    key={feature.id}
                     className="flex gap-4 p-6 rounded-3xl bg-background border border-primary/5 shadow-sm hover:shadow-md transition-shadow"
                   >
                     <div className="shrink-0 w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center">
-                      {item.icon}
+                      <Icon
+                        name={feature.icon}
+                        className="w-6 h-6 text-primary"
+                      />
                     </div>
                     <div>
                       <h3 className="font-bold text-lg text-foreground mb-1">
-                        {item.title}
+                        {t(feature.titleKey)}
                       </h3>
                       <p className="text-foreground/60 text-sm leading-relaxed">
-                        {item.desc}
+                        {t(feature.descriptionKey)}
                       </p>
                     </div>
                   </div>
@@ -129,47 +122,40 @@ export default function Home() {
             <div className="relative">
               {/* Visual Representation of 3 Deliverables */}
               <div className="grid gap-6">
-                <Card className="rounded-3xl border-none shadow-xl bg-white p-8 translate-x-4">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">
-                      1
+                {deliverables.map((deliverable) => (
+                  <Card
+                    key={deliverable.id}
+                    className={`rounded-3xl border-none shadow-xl p-8 ${
+                      deliverable.variant === "primary"
+                        ? "bg-primary text-white"
+                        : "bg-white translate-x-4"
+                    }`}
+                  >
+                    <div className="flex items-center gap-4 mb-4">
+                      <div
+                        className={`w-10 h-10 rounded-full flex items-center justify-center font-bold ${
+                          deliverable.variant === "primary"
+                            ? "bg-white/20 text-white"
+                            : "bg-primary/10 text-primary"
+                        }`}
+                      >
+                        {deliverable.id}
+                      </div>
+                      <h4 className="font-serif font-bold text-xl">
+                        {t(deliverable.titleKey)}
+                      </h4>
                     </div>
-                    <h4 className="font-serif font-bold text-xl">
-                      {t("coaching.deliverable1.title")}
-                    </h4>
-                  </div>
-                  <p className="text-foreground/60">
-                    {t("coaching.deliverable1.description")}
-                  </p>
-                </Card>
-
-                <Card className="rounded-3xl border-none shadow-xl bg-primary text-white p-8">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white font-bold">
-                      2
-                    </div>
-                    <h4 className="font-serif font-bold text-xl">
-                      {t("coaching.deliverable2.title")}
-                    </h4>
-                  </div>
-                  <p className="opacity-80">
-                    {t("coaching.deliverable2.description")}
-                  </p>
-                </Card>
-
-                <Card className="rounded-3xl border-none shadow-xl bg-white p-8 translate-x-4">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">
-                      3
-                    </div>
-                    <h4 className="font-serif font-bold text-xl">
-                      {t("coaching.deliverable3.title")}
-                    </h4>
-                  </div>
-                  <p className="text-foreground/60">
-                    {t("coaching.deliverable3.description")}
-                  </p>
-                </Card>
+                    <p
+                      className={
+                        deliverable.variant === "primary"
+                          ? "opacity-80"
+                          : "text-foreground/60"
+                      }
+                    >
+                      {t(deliverable.descriptionKey)}
+                    </p>
+                  </Card>
+                ))}
               </div>
             </div>
           </div>
@@ -177,7 +163,7 @@ export default function Home() {
       </section>
 
       {/* Services Grid Section */}
-      <section id="servicios" className="py-24 bg-background relative">
+      <section id="services" className="py-24 bg-background relative">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground">
@@ -192,101 +178,62 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* Service 1: Cambios — Hábitos y aprendizaje */}
-            <Card className="rounded-3xl border-none shadow-lg bg-white p-8 hover:shadow-xl transition-shadow group">
-              <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                <Activity className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="text-2xl font-serif font-bold text-foreground mb-3">
-                {t("services.service1.title")}
-              </h3>
-              <p className="text-foreground/60 leading-relaxed mb-6">
-                {t("services.service1.description")}
-              </p>
-              <ul className="space-y-2 mb-6">
-                {[
-                  { text: t("services.service1.feature1"), id: 1 },
-                  { text: t("services.service1.feature2"), id: 2 },
-                  { text: t("services.service1.feature3"), id: 3 },
-                ].map((item) => (
-                  <li
-                    key={item.id}
-                    className="flex items-start gap-2 text-sm text-foreground/70"
-                  >
-                    <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <span>{item.text}</span>
-                  </li>
-                ))}
-              </ul>
-              <Button className="w-full rounded-full bg-primary text-white hover:bg-primary/90 font-bold">
-                {t("services.service1.cta")}
-              </Button>
-            </Card>
-
-            {/* Service 2: Cambios y Medidas */}
-            <Card className="rounded-3xl border-none shadow-lg bg-gradient-to-br from-primary/5 to-primary/10 p-8 hover:shadow-xl transition-shadow group border-2 border-primary/20">
-              <div className="w-16 h-16 rounded-2xl bg-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary/30 transition-colors">
-                <Star className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="text-2xl font-serif font-bold text-foreground mb-3">
-                {t("services.service2.title")}
-              </h3>
-              <p className="text-foreground/60 leading-relaxed mb-6">
-                {t("services.service2.description")}
-              </p>
-              <ul className="space-y-2 mb-6">
-                {[
-                  { text: t("services.service2.feature1"), id: 1 },
-                  { text: t("services.service2.feature2"), id: 2 },
-                  { text: t("services.service2.feature3"), id: 3 },
-                ].map((item) => (
-                  <li
-                    key={item.id}
-                    className="flex items-start gap-2 text-sm text-foreground/70"
-                  >
-                    <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <span>{item.text}</span>
-                  </li>
-                ))}
-              </ul>
-              <Button className="w-full rounded-full bg-primary text-white hover:bg-primary/90 font-bold shadow-lg shadow-primary/30">
-                {t("services.service2.cta")}
-              </Button>
-            </Card>
-
-            {/* Service 3: Acompañamiento Cercano */}
-            <Card className="rounded-3xl border-none shadow-lg bg-white p-8 hover:shadow-xl transition-shadow group">
-              <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                <MessageCircle className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="text-2xl font-serif font-bold text-foreground mb-3">
-                {t("services.service3.title")}
-              </h3>
-              <p className="text-foreground/60 leading-relaxed mb-6">
-                {t("services.service3.description")}
-              </p>
-              <ul className="space-y-2 mb-6">
-                {[
-                  { text: t("services.service3.feature1"), id: 1 },
-                  { text: t("services.service3.feature2"), id: 2 },
-                  { text: t("services.service3.feature3"), id: 3 },
-                ].map((item) => (
-                  <li
-                    key={item.id}
-                    className="flex items-start gap-2 text-sm text-foreground/70"
-                  >
-                    <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <span>{item.text}</span>
-                  </li>
-                ))}
-              </ul>
-              <Button
-                variant="outline"
-                className="w-full rounded-full border-2 border-primary/30 text-foreground hover:bg-primary/5 font-bold bg-transparent"
+            {services.map((service) => (
+              <Card
+                key={service.id}
+                className={`rounded-3xl border-none shadow-lg p-8 hover:shadow-xl transition-shadow group ${
+                  service.variant === "featured"
+                    ? "bg-gradient-to-br from-primary/5 to-primary/10 border-2 border-primary/20"
+                    : "bg-white"
+                }`}
               >
-                {t("services.service3.cta")}
-              </Button>
-            </Card>
+                <div
+                  className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 transition-colors ${
+                    service.variant === "featured"
+                      ? "bg-primary/20 group-hover:bg-primary/30"
+                      : "bg-primary/10 group-hover:bg-primary/20"
+                  }`}
+                >
+                  <Icon name={service.icon} className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="text-2xl font-serif font-bold text-foreground mb-3">
+                  {t(service.titleKey)}
+                </h3>
+                <p className="text-foreground/60 leading-relaxed mb-6">
+                  {t(service.descriptionKey)}
+                </p>
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature) => (
+                    <li
+                      key={feature.id}
+                      className="flex items-start gap-2 text-sm text-foreground/70"
+                    >
+                      <Icon
+                        name="CheckCircle"
+                        className="w-5 h-5 text-primary shrink-0 mt-0.5"
+                      />
+                      <span>{t(feature.translationKey)}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Button
+                  variant={
+                    service.variant === "outline" ? "outline" : "default"
+                  }
+                  className={(() => {
+                    if (service.variant === "outline") {
+                      return "w-full rounded-full font-bold border-2 border-primary/30 text-foreground hover:bg-primary/5 bg-transparent";
+                    }
+                    if (service.variant === "featured") {
+                      return "w-full rounded-full font-bold bg-primary text-white hover:bg-primary/90 shadow-lg shadow-primary/30";
+                    }
+                    return "w-full rounded-full font-bold bg-primary text-white hover:bg-primary/90";
+                  })()}
+                >
+                  {t(service.ctaKey)}
+                </Button>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -313,18 +260,16 @@ export default function Home() {
               </div>
 
               <div className="flex flex-col gap-6">
-                <div className="flex gap-4 items-start">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                    <ChevronRight className="w-6 h-6 text-primary" />
+                {calculatorPoints.map((point) => (
+                  <div key={point.id} className="flex gap-4 items-start">
+                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                      <ChevronRight className="w-6 h-6 text-primary" />
+                    </div>
+                    <p className="text-foreground/60">
+                      {t(point.translationKey)}
+                    </p>
                   </div>
-                  <p className="text-foreground/60">{t("calculator.point1")}</p>
-                </div>
-                <div className="flex gap-4 items-start">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                    <ChevronRight className="w-6 h-6 text-primary" />
-                  </div>
-                  <p className="text-foreground/60">{t("calculator.point2")}</p>
-                </div>
+                ))}
               </div>
             </div>
 
@@ -357,46 +302,30 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {[
-              {
-                quote: t("testimonials.testimonial1.quote"),
-                author: t("testimonials.testimonial1.author"),
-                role: t("testimonials.testimonial1.role"),
-              },
-              {
-                quote: t("testimonials.testimonial2.quote"),
-                author: t("testimonials.testimonial2.author"),
-                role: t("testimonials.testimonial2.role"),
-              },
-              {
-                quote: t("testimonials.testimonial3.quote"),
-                author: t("testimonials.testimonial3.author"),
-                role: t("testimonials.testimonial3.role"),
-              },
-            ].map((testimonial) => (
+            {testimonials.map((testimonial) => (
               <Card
-                key={testimonial.author}
+                key={testimonial.id}
                 className="rounded-3xl border-none shadow-lg bg-white p-8 hover:shadow-xl transition-all hover:-translate-y-2"
               >
                 <div className="mb-6">
                   <div className="flex gap-1 mb-4">
-                    {[...Array(5)].map((_, idx) => (
+                    {Array.from({ length: 5 }).map((_, idx) => (
                       <Star
-                        key={idx}
+                        key={`star-${testimonial.id}-${idx}`}
                         className="w-5 h-5 fill-primary text-primary"
                       />
                     ))}
                   </div>
                   <p className="text-foreground/80 leading-relaxed italic">
-                    &quot;{testimonial.quote}&quot;
+                    &quot;{t(testimonial.quoteKey)}&quot;
                   </p>
                 </div>
                 <div className="border-t border-primary/10 pt-4">
                   <p className="font-bold text-foreground">
-                    {testimonial.author}
+                    {t(testimonial.authorKey)}
                   </p>
                   <p className="text-sm text-foreground/50">
-                    {testimonial.role}
+                    {t(testimonial.roleKey)}
                   </p>
                 </div>
               </Card>
