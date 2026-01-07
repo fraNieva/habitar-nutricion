@@ -51,7 +51,7 @@ export function MacroCalculator() {
   };
 
   return (
-    <Card className="rounded-3xl border-none shadow-2xl bg-white overflow-hidden max-w-lg mx-auto">
+    <Card className="rounded-3xl border-none shadow-2xl overflow-hidden max-w-lg mx-auto">
       <div className="bg-primary/5 p-8 text-center space-y-2">
         <h3 className="text-2xl font-serif font-bold text-foreground">
           Descubre tu punto de partida

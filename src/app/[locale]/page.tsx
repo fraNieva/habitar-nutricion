@@ -128,7 +128,7 @@ export default function Home() {
                     className={`rounded-3xl border-none shadow-xl p-8 ${
                       deliverable.variant === "primary"
                         ? "bg-primary text-white"
-                        : "bg-white translate-x-4"
+                        : "translate-x-4"
                     }`}
                   >
                     <div className="flex items-center gap-4 mb-4">
@@ -184,7 +184,7 @@ export default function Home() {
                 className={`rounded-3xl border-none shadow-lg p-8 hover:shadow-xl transition-shadow group ${
                   service.variant === "featured"
                     ? "bg-gradient-to-br from-primary/5 to-primary/10 border-2 border-primary/20"
-                    : "bg-white"
+                    : ""
                 }`}
               >
                 <div
@@ -305,7 +305,7 @@ export default function Home() {
             {testimonials.map((testimonial) => (
               <Card
                 key={testimonial.id}
-                className="rounded-3xl border-none shadow-lg bg-white p-8 hover:shadow-xl transition-all hover:-translate-y-2"
+                className="rounded-3xl border-none shadow-lg p-8 hover:shadow-xl transition-all hover:-translate-y-2"
               >
                 <div className="mb-6">
                   <div className="flex gap-1 mb-4">
