@@ -220,13 +220,15 @@ export default function Home() {
                   variant={
                     service.variant === "outline" ? "outline" : "default"
                   }
-                  className={`w-full rounded-full font-bold ${
-                    service.variant === "outline"
-                      ? "border-2 border-primary/30 text-foreground hover:bg-primary/5 bg-transparent"
-                      : service.variant === "featured"
-                      ? "bg-primary text-white hover:bg-primary/90 shadow-lg shadow-primary/30"
-                      : "bg-primary text-white hover:bg-primary/90"
-                  }`}
+                  className={(() => {
+                    if (service.variant === "outline") {
+                      return "w-full rounded-full font-bold border-2 border-primary/30 text-foreground hover:bg-primary/5 bg-transparent";
+                    }
+                    if (service.variant === "featured") {
+                      return "w-full rounded-full font-bold bg-primary text-white hover:bg-primary/90 shadow-lg shadow-primary/30";
+                    }
+                    return "w-full rounded-full font-bold bg-primary text-white hover:bg-primary/90";
+                  })()}
                 >
                   {t(service.ctaKey)}
                 </Button>
@@ -307,7 +309,7 @@ export default function Home() {
               >
                 <div className="mb-6">
                   <div className="flex gap-1 mb-4">
-                    {[...Array(5)].map((_, idx) => (
+                    {Array.from({ length: 5 }).map((_, idx) => (
                       <Star
                         key={`star-${testimonial.id}-${idx}`}
                         className="w-5 h-5 fill-primary text-primary"
