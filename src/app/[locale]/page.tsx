@@ -12,6 +12,8 @@ import { useTranslations } from "next-intl";
 
 export default function Home() {
   const t = useTranslations("HomePage");
+  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
+  const whatsappMessage = encodeURIComponent(t("whatsapp.message"));
 
   return (
     <div className="flex-1 min-h-screen flex-col bg-background selection:bg-primary/20 font-sans">
@@ -368,7 +370,7 @@ export default function Home() {
 
       {/* WhatsApp Float */}
       <a
-        href="https://wa.me/yournumber"
+        href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
         target="_blank"
         className="fixed bottom-8 right-8 z-50 w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform active:scale-95"
         rel="noreferrer"
@@ -430,9 +432,9 @@ export default function Home() {
                 {t("footer.links.contactLink")}
               </h4>
               <ul className="space-y-2 text-foreground/60">
-                <li>hola@julieta.com</li>
-                <li>+54 9 11 xxxx-xxxx</li>
-                <li>Buenos Aires, Argentina</li>
+                <li>julietadainabrest@gmail.com</li>
+                <li>+34 611 542 474</li>
+                <li>Barcelona, España</li>
               </ul>
             </div>
           </div>
