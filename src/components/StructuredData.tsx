@@ -1,13 +1,16 @@
 export function StructuredData() {
+  const baseUrl =
+    process.env.NEXT_PUBLIC_SITE_URL || "https://habitarnutricion.vercel.app";
+
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "HealthAndBeautyBusiness",
-    "@id": "https://habitarnutricion.vercel.app/#organization",
+    "@id": `${baseUrl}/#organization`,
     name: "Habitar Nutrición",
     alternateName: "Habitar Nutricion",
-    url: "https://habitarnutricion.vercel.app",
-    logo: "https://habitarnutricion.vercel.app/og-image.jpg",
-    image: "https://habitarnutricion.vercel.app/og-image.jpg",
+    url: baseUrl,
+    logo: `${baseUrl}/og-image.jpg`,
+    image: `${baseUrl}/og-image.jpg`,
     description:
       "Coaching nutricional con enfoque humano. Antropometría ISAK, gestión de hábitos y planes personalizados para lograr cambios sostenibles.",
     founder: {
@@ -83,13 +86,13 @@ export function StructuredData() {
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "@id": "https://habitarnutricion.vercel.app/#website",
-    url: "https://habitarnutricion.vercel.app",
+    "@id": `${baseUrl}/#website`,
+    url: baseUrl,
     name: "Habitar Nutrición",
     description:
       "Coaching nutricional consciente y antropometría ISAK en Barcelona",
     publisher: {
-      "@id": "https://habitarnutricion.vercel.app/#organization",
+      "@id": `${baseUrl}/#organization`,
     },
     inLanguage: ["es", "en"],
   };
@@ -97,19 +100,19 @@ export function StructuredData() {
   const professionalServiceSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "@id": "https://habitarnutricion.vercel.app/#service",
+    "@id": `${baseUrl}/#service`,
     name: "Habitar Nutrición - Coaching Nutricional",
     description:
       "Servicios profesionales de nutrición deportiva, coaching nutricional y antropometría ISAK en Barcelona",
     provider: {
-      "@id": "https://habitarnutricion.vercel.app/#organization",
+      "@id": `${baseUrl}/#organization`,
     },
     areaServed: {
       "@type": "City",
       name: "Barcelona",
     },
     hasOfferCatalog: {
-      "@id": "https://habitarnutricion.vercel.app/#organization",
+      "@id": `${baseUrl}/#organization`,
     },
   };
 

@@ -23,7 +23,9 @@ const playfair = Playfair_Display({
 });
 
 // Base URL for absolute paths
-export const metadataBase = new URL("https://habitarnutricion.vercel.app");
+export const metadataBase = new URL(
+  process.env.NEXT_PUBLIC_SITE_URL || "https://habitarnutricion.vercel.app"
+);
 
 // Dynamic Metadata with i18n support
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
