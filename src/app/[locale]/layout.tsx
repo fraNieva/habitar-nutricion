@@ -1,4 +1,5 @@
 import { Navbar } from "@/components/navbar";
+import { StructuredData } from "@/components/StructuredData";
 import { ThemeProvider } from "@/components/theme-provider";
 import { routing } from "@/i18n/routing";
 import type { Metadata } from "next";
@@ -111,6 +112,9 @@ export default async function RootLayout({ children, params }: Props) {
 
   return (
     <html lang={locale} suppressHydrationWarning>
+      <head>
+        <StructuredData />
+      </head>
       <body
         className={`${jakarta.variable} ${playfair.variable} antialiased bg-background text-foreground`}
         suppressHydrationWarning
