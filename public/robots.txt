@@ -1,0 +1,12 @@
+# robots.txt for Habitar Nutrición
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Disallow admin or private paths (add if needed)
+# Disallow: /admin/
+# Disallow: /api/
+
+# Sitemap location
+Sitemap: https://habitarnutricion.vercel.app/sitemap.xml
