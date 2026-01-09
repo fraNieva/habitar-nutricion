@@ -1,4 +1,13 @@
 {
+  "Metadata": {
+    "title": "Habitar Nutrición | Conscious Nutritional Coaching",
+    "description": "Nutritional coaching with a human approach. ISAK anthropometry, habit management, and personalized plans to achieve sustainable changes in your nutrition and wellness.",
+    "keywords": "nutritional coaching, nutritionist Barcelona, ISAK anthropometry, conscious nutrition, eating habits, personalized nutrition plan, sports nutritionist, body composition",
+    "ogTitle": "Habitar Nutrición - Conscious Nutritional Coaching in Barcelona",
+    "ogDescription": "Transform your relationship with food. Nutritional coaching with ISAK anthropometry, habit management, and 100% personalized plans. Real, sustainable changes.",
+    "twitterTitle": "Habitar Nutrición | Conscious Nutritional Coaching",
+    "twitterDescription": "Nutrition and anthropometry with a human approach. Professional support to achieve sustainable changes in your eating habits and wellness."
+  },
   "Index": {
     "title": "Science for your body, coaching for your life",
     "calculator": "Macros Calculator"
@@ -130,7 +139,8 @@
       "terms": "Terms"
     },
     "whatsapp": {
-      "message": "Hello 🌿\nI was browsing the Habitar Nutrición website and would like to receive information about nutritional coaching and ways of working.\nThank you!"
+      "message": "Hello 🌿\nI was browsing the Habitar Nutrición website and would like to receive information about nutritional coaching and ways of working.\nThank you!",
+      "ariaLabel": "Contact via WhatsApp"
     }
   }
 }
