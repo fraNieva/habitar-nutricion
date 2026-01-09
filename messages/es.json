@@ -1,4 +1,13 @@
 {
+  "Metadata": {
+    "title": "Habitar Nutrición | Coaching Nutricional Consciente",
+    "description": "Coaching nutricional con enfoque humano. Antropometría ISAK, gestión de hábitos y planes personalizados para lograr cambios sostenibles en tu nutrición y bienestar.",
+    "keywords": "coaching nutricional, nutricionista Barcelona, antropometría ISAK, nutrición consciente, hábitos alimentarios, plan nutricional personalizado, nutricionista deportivo, composición corporal",
+    "ogTitle": "Habitar Nutrición - Coaching Nutricional Consciente en Barcelona",
+    "ogDescription": "Transformá tu relación con la comida. Coaching nutricional con antropometría ISAK, gestión de hábitos y planes 100% personalizados. Cambios reales y sostenibles en el tiempo.",
+    "twitterTitle": "Habitar Nutrición | Coaching Nutricional Consciente",
+    "twitterDescription": "Nutrición y antropometría con enfoque humano. Acompañamiento profesional para lograr cambios sostenibles en tus hábitos alimentarios."
+  },
   "Index": {
     "title": "Ciencia para tu cuerpo, coaching para tu vida",
     "calculator": "Calculadora de Macros"
@@ -130,7 +139,8 @@
       "terms": "Términos"
     },
     "whatsapp": {
-      "message": "Hola 🌿\nEstuve recorriendo la web de Habitar Nutrición y me gustaría recibir información sobre el acompañamiento nutricional y las formas de trabajo.\n¡Gracias!"
+      "message": "Hola 🌿\nEstuve recorriendo la web de Habitar Nutrición y me gustaría recibir información sobre el acompañamiento nutricional y las formas de trabajo.\n¡Gracias!",
+      "ariaLabel": "Contactar por WhatsApp"
     }
   }
 }
