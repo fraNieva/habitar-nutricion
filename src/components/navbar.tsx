@@ -4,11 +4,13 @@ import { LanguageSwitcher } from "@/components/language-switcher";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/routing";
+import { getWhatsAppLink } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 
 export function Navbar() {
   // Usamos el hook para traducir los textos del menú
   const t = useTranslations("Navbar");
+  const t2 = useTranslations("HomePage");
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/60">
@@ -51,7 +53,13 @@ export function Navbar() {
 
           {/* CTA Principal */}
           <Button asChild className="rounded-full hidden sm:flex">
-            <Link href="/contact">{t("book")}</Link>
+            <a
+              href={getWhatsAppLink(t2("whatsapp.message"))}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {t("book")}
+            </a>
           </Button>
         </div>
       </div>

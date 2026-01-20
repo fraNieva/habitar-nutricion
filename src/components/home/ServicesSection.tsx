@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Icon } from "@/components/ui/icon";
 import { services } from "@/data/home/services";
+import { getWhatsAppLink } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 
 export function ServicesSection() {
@@ -33,7 +34,7 @@ export function ServicesSection() {
           {services.map((service) => (
             <Card
               key={service.id}
-              className={`rounded-3xl border-none shadow-lg p-8 hover:shadow-xl transition-shadow group ${
+              className={`flex flex-col rounded-3xl border-none shadow-lg p-8 hover:shadow-xl transition-shadow group ${
                 service.variant === "featured"
                   ? "bg-gradient-to-br from-primary/5 to-primary/10 border-2 border-primary/20"
                   : ""
@@ -72,15 +73,22 @@ export function ServicesSection() {
                 variant={service.variant === "outline" ? "outline" : "default"}
                 className={(() => {
                   if (service.variant === "outline") {
-                    return "w-full rounded-full font-bold border-2 border-primary/30 text-foreground hover:bg-primary/5 bg-transparent";
+                    return "w-full rounded-full font-bold border-2 border-primary/30 text-foreground hover:bg-primary/5 bg-transparent mt-auto";
                   }
                   if (service.variant === "featured") {
-                    return "w-full rounded-full font-bold bg-primary text-white hover:bg-primary/90 shadow-lg shadow-primary/30";
+                    return "w-full rounded-full font-bold bg-primary text-white hover:bg-primary/90 shadow-lg shadow-primary/30 mt-auto";
                   }
-                  return "w-full rounded-full font-bold bg-primary text-white hover:bg-primary/90";
+                  return "w-full rounded-full font-bold bg-primary text-white hover:bg-primary/90 mt-auto";
                 })()}
+                asChild
               >
-                {t(service.ctaKey)}
+                <a
+                  href={getWhatsAppLink(t("whatsapp.message"))}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {t(service.ctaKey)}
+                </a>
               </Button>
             </Card>
           ))}

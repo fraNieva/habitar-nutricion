@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { getWhatsAppLink } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 
 export function CtaSection() {
@@ -28,16 +29,15 @@ export function CtaSection() {
               size="lg"
               className="w-full sm:w-auto rounded-full h-16 px-12 text-lg font-bold bg-primary text-white hover:bg-primary/90 shadow-xl shadow-primary/25"
               aria-label={t("cta.ctaPrimary")}
+              asChild
             >
-              {t("cta.ctaPrimary")}
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="w-full sm:w-auto rounded-full h-16 px-12 text-lg font-bold border-2 border-primary/20 text-foreground hover:bg-white bg-transparent"
-              aria-label={t("cta.ctaSecondary")}
-            >
-              {t("cta.ctaSecondary")}
+              <a
+                href={getWhatsAppLink(t("whatsapp.message"))}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {t("cta.ctaPrimary")}
+              </a>
             </Button>
           </div>
         </div>
