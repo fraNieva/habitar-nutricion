@@ -44,6 +44,10 @@
         "title": "Enfoque Emocional",
         "description": "Entender cómo, cuándo y por qué comés también es parte del proceso."
       },
+      "education": {
+        "title": "Educación Nutricional",
+        "description": "Aprendé a tomar decisiones informadas sobre tu alimentación y bienestar."
+      },
       "deliverable1": {
         "title": "Plan de Acción Mensual",
         "description": "Objetivos claros, requerimientos energéticos y lineamientos simples adaptados a tu momento."
@@ -139,7 +143,7 @@
       "terms": "Términos"
     },
     "whatsapp": {
-      "message": "Hola 🌿\nEstuve recorriendo la web de Habitar Nutrición y me gustaría recibir información sobre el acompañamiento nutricional y las formas de trabajo.\n¡Gracias!",
+      "message": "Hola!\nEstuve recorriendo la web de Habitar Nutrición y me gustaría recibir información sobre el acompañamiento nutricional y las formas de trabajo.\n¡Gracias!",
       "ariaLabel": "Contactar por WhatsApp"
     }
   }

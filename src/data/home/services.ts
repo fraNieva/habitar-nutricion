@@ -12,7 +12,7 @@ export const services: Service[] = [
       { id: 3, translationKey: "services.service1.feature3" },
     ],
     ctaKey: "services.service1.cta",
-    variant: "default",
+    variant: "featured",
   },
   {
     id: "service2",
@@ -25,7 +25,7 @@ export const services: Service[] = [
       { id: 3, translationKey: "services.service2.feature3" },
     ],
     ctaKey: "services.service2.cta",
-    variant: "featured",
+    variant: "default",
   },
   {
     id: "service3",
@@ -38,6 +38,6 @@ export const services: Service[] = [
       { id: 3, translationKey: "services.service3.feature3" },
     ],
     ctaKey: "services.service3.cta",
-    variant: "outline",
+    variant: "featured",
   },
 ];

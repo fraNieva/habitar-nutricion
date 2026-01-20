@@ -13,6 +13,12 @@ export const coachingFeatures: CoachingFeature[] = [
     titleKey: "coaching.emotional.title",
     descriptionKey: "coaching.emotional.description",
   },
+  {
+    id: "education",
+    icon: "BookOpen",
+    titleKey: "coaching.education.title",
+    descriptionKey: "coaching.education.description",
+  },
 ];
 
 export const deliverables: Deliverable[] = [

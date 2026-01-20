@@ -1,10 +1,21 @@
-import { Activity, CheckCircle2, MessageCircle, Star } from "lucide-react";
+import {
+  Activity,
+  Book,
+  CheckCircle2,
+  MessageCircle,
+  Star,
+} from "lucide-react";
 
-type IconName = "Activity" | "MessageCircle" | "Star" | "CheckCircle";
+type IconName =
+  | "Activity"
+  | "MessageCircle"
+  | "Star"
+  | "CheckCircle"
+  | "BookOpen";
 
 interface IconProps {
-  name: IconName;
-  className?: string;
+  readonly name: IconName;
+  readonly className?: string;
 }
 
 export function Icon({ name, className }: IconProps) {
@@ -13,6 +24,7 @@ export function Icon({ name, className }: IconProps) {
     MessageCircle: MessageCircle,
     Star: Star,
     CheckCircle: CheckCircle2,
+    BookOpen: Book,
   };
 
   const IconComponent = icons[name];

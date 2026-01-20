@@ -6,7 +6,7 @@ export interface TrustIndicator {
 
 export interface CoachingFeature {
   id: string;
-  icon: "Activity" | "MessageCircle";
+  icon: "Activity" | "MessageCircle" | "BookOpen";
   titleKey: string;
   descriptionKey: string;
 }
@@ -25,7 +25,7 @@ export interface ServiceFeature {
 
 export interface Service {
   id: string;
-  icon: "Activity" | "Star" | "MessageCircle";
+  icon: "Activity" | "Star" | "MessageCircle" | "BookOpen";
   titleKey: string;
   descriptionKey: string;
   features: ServiceFeature[];

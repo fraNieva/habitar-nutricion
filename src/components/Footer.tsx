@@ -71,7 +71,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:julietadainabrest@gmail.com"
+                  href="mailto:julietadaianabrest@gmail.com"
                   className="text-foreground/60 hover:text-primary transition-colors"
                 >
                   {t("footer.links.contactLink")}
@@ -87,10 +87,10 @@ export function Footer() {
             <ul className="space-y-2 text-foreground/60">
               <li>
                 <a
-                  href="mailto:julietadainabrest@gmail.com"
+                  href="mailto:julietadaianabrest@gmail.com"
                   className="hover:text-primary transition-colors"
                 >
-                  julietadainabrest@gmail.com
+                  julietadaianabrest@gmail.com
                 </a>
               </li>
               <li>
