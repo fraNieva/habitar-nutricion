@@ -27,17 +27,4 @@ export const services: Service[] = [
     ctaKey: "services.service2.cta",
     variant: "default",
   },
-  {
-    id: "service3",
-    icon: "MessageCircle",
-    titleKey: "services.service3.title",
-    descriptionKey: "services.service3.description",
-    features: [
-      { id: 1, translationKey: "services.service3.feature1" },
-      { id: 2, translationKey: "services.service3.feature2" },
-      { id: 3, translationKey: "services.service3.feature3" },
-    ],
-    ctaKey: "services.service3.cta",
-    variant: "featured",
-  },
 ];

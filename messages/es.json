@@ -48,6 +48,7 @@
         "title": "Educación Nutricional",
         "description": "Aprendé a tomar decisiones informadas sobre tu alimentación y bienestar."
       },
+      "deliverablesTitle": "¿Cómo trabajamos en Habitar Nutrición?",
       "deliverable1": {
         "title": "Plan de Acción Mensual",
         "description": "Objetivos claros, requerimientos energéticos y lineamientos simples adaptados a tu momento."
@@ -104,17 +105,17 @@
       "titleHighlight": "se sostienen",
       "description": "Más allá de los números, lo que importa es cómo te sientes cada día.",
       "testimonial1": {
-        "quote": "Recuperé mi energía en los entrenamientos y aprendí a comer sin ansiedad. Julieta me enseñó que no se trata de contar calorías sino de entender mi cuerpo.",
+        "quote": "Gracias al trabajo con Julieta, recuperé mi energía en los entrenamientos y, sobre todo, aprendí a comer sin ansiedad. Ella me enseñó que el secreto no está en contar calorías de forma obsesiva, sino en aprender a entender mi cuerpo y darle lo que realmente necesita.",
         "author": "Martina R.",
         "role": "Entrena Crossfit"
       },
       "testimonial2": {
-        "quote": "Bajé 8kg en 4 meses sin pasar hambre. Lo mejor fue el acompañamiento emocional, no solo me dio un plan, me ayudó a cambiar mi mentalidad.",
-        "author": "Lucas M.",
+        "quote": "Excelente profesional. Gracias a su acompañamiento aprendí a ordenar mis comidas y a entender qué necesita mi cuerpo. No es solo darte un menú, es enseñarte a comer mejor. Ese orden se reflejó directamente en mis entrenamientos: más fuerza y mejor resistencia.",
+        "author": "Franco N.",
         "role": "Trabajo de oficina"
       },
       "testimonial3": {
-        "quote": "La evaluación ISAK fue reveladora. Entender mi composición corporal real me motivó a seguir el plan con disciplina y los resultados fueron increíbles.",
+        "quote": "La evaluación ISAK fue realmente reveladora. Entender mi composición corporal real y detallada me dio la motivación necesaria para seguir el plan con total disciplina. Los resultados fueron increíbles y se notaron rápido tanto en mi físico como en mi rendimiento.",
         "author": "Camila P.",
         "role": "Corredora amateur"
       }

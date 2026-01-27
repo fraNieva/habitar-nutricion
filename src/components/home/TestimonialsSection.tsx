@@ -59,9 +59,6 @@ export function TestimonialsSection() {
                 <p className="font-bold text-foreground">
                   {t(testimonial.authorKey)}
                 </p>
-                <p className="text-sm text-foreground/50">
-                  {t(testimonial.roleKey)}
-                </p>
               </div>
             </Card>
           ))}

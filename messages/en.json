@@ -48,6 +48,7 @@
         "title": "Nutritional Education",
         "description": "Learn to make informed decisions about your eating and wellness."
       },
+      "deliverablesTitle": "How do we work at Habitar Nutrición?",
       "deliverable1": {
         "title": "Monthly Action Plan",
         "description": "Clear objectives, energy requirements, and simple guidelines adapted to your current situation."
@@ -104,17 +105,17 @@
       "titleHighlight": "last",
       "description": "Beyond the numbers, what matters is how you feel every day.",
       "testimonial1": {
-        "quote": "I recovered my energy in training and learned to eat without anxiety. Julieta taught me that it's not about counting calories but understanding my body.",
+        "quote": "Thanks to the work with Julieta, I recovered my energy in training and, above all, I learned to eat without anxiety. She taught me that the secret is not in obsessively counting calories, but in learning to understand my body and give it what it really needs.",
         "author": "Martina R.",
         "role": "CrossFit Trainer"
       },
       "testimonial2": {
-        "quote": "I lost 18lbs in 4 months without going hungry. The best part was the emotional support, she didn't just give me a plan, she helped me change my mindset.",
-        "author": "Lucas M.",
+        "quote": "Excellent professional. Thanks to her guidance, I learned to organize my meals and understand what my body needs. It's not just about giving you a menu, it's about teaching you to eat better. That organization was directly reflected in my training: more strength and better endurance.",
+        "author": "Franco N.",
         "role": "Office worker"
       },
       "testimonial3": {
-        "quote": "The ISAK assessment was eye-opening. Understanding my real body composition motivated me to follow the plan with discipline and the results were incredible.",
+        "quote": "The ISAK assessment was truly revealing. Understanding my real and detailed body composition gave me the necessary motivation to follow the plan with total discipline. The results were incredible and were quickly noticeable both in my physique and in my performance.",
         "author": "Camila P.",
         "role": "Amateur runner"
       }
