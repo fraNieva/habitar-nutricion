@@ -57,6 +57,9 @@ export function CoachingSection() {
           </div>
 
           <div className="relative">
+            <h3 className="text-2xl font-serif font-bold text-foreground mb-8 text-center">
+              {t("coaching.deliverablesTitle")}
+            </h3>
             {/* Visual Representation of 3 Deliverables */}
             <div className="grid gap-6">
               {deliverables.map((deliverable) => (

@@ -30,7 +30,7 @@ export function ServicesSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {services.map((service) => (
             <Card
               key={service.id}
@@ -40,16 +40,7 @@ export function ServicesSection() {
                   : ""
               }`}
             >
-              <div
-                className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 transition-colors ${
-                  service.variant === "featured"
-                    ? "bg-primary/20 group-hover:bg-primary/30"
-                    : "bg-primary/10 group-hover:bg-primary/20"
-                }`}
-              >
-                <Icon name={service.icon} className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="text-2xl font-serif font-bold text-foreground mb-3">
+              <h3 className="text-2xl font-serif font-bold text-foreground mb-3 text-center">
                 {t(service.titleKey)}
               </h3>
               <p className="text-foreground/60 leading-relaxed mb-6">
