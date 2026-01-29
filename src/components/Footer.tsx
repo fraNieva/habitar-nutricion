@@ -17,19 +17,6 @@ export function Footer() {
             <p className="text-foreground/60 leading-relaxed max-w-sm">
               {t("footer.description")}
             </p>
-            <div className="flex gap-3">
-              {["instagram", "linkedin", "whatsapp"].map((social) => (
-                <button
-                  key={social}
-                  className="w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 flex items-center justify-center transition-colors"
-                  aria-label={`Visit ${social}`}
-                  onClick={() => console.log(`Navigate to ${social}`)}
-                >
-                  <span className="sr-only">{social}</span>
-                  <div className="w-5 h-5 bg-primary/40 rounded-full" />
-                </button>
-              ))}
-            </div>
           </div>
 
           <nav className="space-y-4" aria-label="Footer navigation">
