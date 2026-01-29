@@ -68,7 +68,7 @@ export function CoachingSection() {
                   className={`rounded-3xl border-none shadow-xl p-8 ${
                     deliverable.variant === "primary"
                       ? "bg-primary text-white"
-                      : "translate-x-4"
+                      : ""
                   }`}
                 >
                   <div className="flex items-center gap-4 mb-4">
