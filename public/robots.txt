@@ -9,4 +9,4 @@ Allow: /
 # Disallow: /api/
 
 # Sitemap location
-Sitemap: https://habitarnutricion.vercel.app/sitemap.xml
+Sitemap: https://habitarnutricion.com/sitemap.xml
