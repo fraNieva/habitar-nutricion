@@ -2,6 +2,7 @@ import { Navbar } from "@/components/navbar";
 import { StructuredData } from "@/components/StructuredData";
 import { ThemeProvider } from "@/components/theme-provider";
 import { routing } from "@/i18n/routing";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
@@ -24,7 +25,7 @@ const playfair = Playfair_Display({
 
 // Base URL for absolute paths
 export const metadataBase = new URL(
-  process.env.NEXT_PUBLIC_SITE_URL || "https://habitarnutricion.vercel.app"
+  process.env.NEXT_PUBLIC_SITE_URL || "https://habitarnutricion.vercel.app",
 );
 
 // Dynamic Metadata with i18n support
@@ -132,6 +133,7 @@ export default async function RootLayout({ children, params }: Props) {
             <div className="min-h-screen flex flex-col">{children}</div>
           </ThemeProvider>
         </NextIntlClientProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
