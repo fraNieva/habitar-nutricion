@@ -48,7 +48,10 @@
         "title": "Nutritional Education",
         "description": "Learn to make informed decisions about your eating and wellness."
       },
-      "deliverablesTitle": "How do we work at Habitar Nutrición?",
+      "deliverablesTitle": "How do we work at ",
+      "deliverablesHighlight": "Habitar Nutrición",
+      "deliverablesTitleEnd": "?",
+
       "deliverable1": {
         "title": "Monthly Action Plan",
         "description": "Clear objectives, energy requirements, and simple guidelines adapted to your current situation."

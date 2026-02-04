@@ -59,6 +59,10 @@ export function CoachingSection() {
           <div className="relative hidden lg:block">
             <h2 className="text-4xl font-serif font-bold text-foreground mb-8 text-center">
               {t("coaching.deliverablesTitle")}
+              <span className="text-primary">
+                {t("coaching.deliverablesHighlight")}
+              </span>
+              {t("coaching.deliverablesTitleEnd")}
             </h2>
             {/* Visual Representation of 3 Deliverables */}
             <div className="grid gap-6">
@@ -75,7 +79,7 @@ export function CoachingSection() {
                     <div
                       className={`w-10 h-10 rounded-full flex items-center justify-center font-bold ${
                         deliverable.variant === "primary"
-                          ? "bg-white/20 text-white"
+                          ? "bg-white/20 text-primary"
                           : "bg-primary/10 text-primary"
                       }`}
                     >
