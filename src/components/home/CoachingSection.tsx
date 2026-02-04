@@ -9,7 +9,7 @@ export function CoachingSection() {
   return (
     <section
       id="method"
-      className="py-24 bg-white/50 relative overflow-hidden"
+      className="py-24 bg-white/20 relative overflow-hidden"
       aria-labelledby="coaching-title"
     >
       <div className="container mx-auto px-6">
@@ -35,7 +35,7 @@ export function CoachingSection() {
               {coachingFeatures.map((feature) => (
                 <div
                   key={feature.id}
-                  className="flex gap-4 p-6 rounded-3xl bg-background border border-primary/5 shadow-sm hover:shadow-md transition-shadow"
+                  className="flex gap-4 p-6 rounded-3xl bg-primary/20 border border-primary/5 shadow-sm hover:shadow-md transition-shadow"
                 >
                   <div className="shrink-0 w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center">
                     <Icon
@@ -56,10 +56,10 @@ export function CoachingSection() {
             </div>
           </div>
 
-          <div className="relative">
-            <h3 className="text-2xl font-serif font-bold text-foreground mb-8 text-center">
+          <div className="relative hidden lg:block">
+            <h2 className="text-4xl font-serif font-bold text-foreground mb-8 text-center">
               {t("coaching.deliverablesTitle")}
-            </h3>
+            </h2>
             {/* Visual Representation of 3 Deliverables */}
             <div className="grid gap-6">
               {deliverables.map((deliverable) => (
@@ -67,7 +67,7 @@ export function CoachingSection() {
                   key={deliverable.id}
                   className={`rounded-3xl border-none shadow-xl p-8 ${
                     deliverable.variant === "primary"
-                      ? "bg-primary text-white"
+                      ? "bg-primary/40 text-foreground"
                       : ""
                   }`}
                 >
