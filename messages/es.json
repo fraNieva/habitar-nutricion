@@ -48,7 +48,9 @@
         "title": "Educación Nutricional",
         "description": "Aprendé a tomar decisiones informadas sobre tu alimentación y bienestar."
       },
-      "deliverablesTitle": "¿Cómo trabajamos en Habitar Nutrición?",
+      "deliverablesTitle": "¿Cómo trabajamos en ",
+      "deliverablesHighlight": "Habitar Nutrición",
+      "deliverablesTitleEnd": "?",
       "deliverable1": {
         "title": "Plan de Acción Mensual",
         "description": "Objetivos claros, requerimientos energéticos y lineamientos simples adaptados a tu momento."

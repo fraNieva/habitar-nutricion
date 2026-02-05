@@ -12,10 +12,10 @@ export default function Home() {
     <>
       <main className="flex-1 min-h-screen flex-col bg-background selection:bg-primary/20 font-sans">
         <HeroSection />
+        <TestimonialsSection />
+        <CalculatorSection />
         <CoachingSection />
         <ServicesSection />
-        <CalculatorSection />
-        <TestimonialsSection />
         <CtaSection />
       </main>
       <WhatsAppButton />

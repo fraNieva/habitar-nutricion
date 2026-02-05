@@ -6,7 +6,9 @@
 /* HABITAR NUTRICIÓN — Natural & Conscious */
 :root {
   /* Backgrounds */
-  --background: oklch(0.97 0.015 140); /* Blanco verdoso */
+  --background: oklch(
+    0.99 0.003 130
+  ); /* Blanco verdoso - converted from lab(108.714% 2.08 0.647) */
   --card: oklch(0.99 0.01 140);
   --popover: oklch(0.99 0.01 140);
 
