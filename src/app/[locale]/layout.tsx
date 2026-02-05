@@ -2,6 +2,7 @@ import { Navbar } from "@/components/navbar";
 import { StructuredData } from "@/components/StructuredData";
 import { ThemeProvider } from "@/components/theme-provider";
 import { routing } from "@/i18n/routing";
+import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
@@ -134,6 +135,7 @@ export default async function RootLayout({ children, params }: Props) {
           </ThemeProvider>
         </NextIntlClientProvider>
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
