@@ -28,7 +28,7 @@ export function HeroSection() {
 
       <div className="container mx-auto px-6 relative z-10 text-center">
         <div className="max-w-4xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-1000">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary font-bold text-sm tracking-wide">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-secondary font-bold text-sm tracking-wide">
             {t("hero.badge")}
           </span>
 
