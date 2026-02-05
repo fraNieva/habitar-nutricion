@@ -3,6 +3,7 @@ import { Icon } from "@/components/ui/icon";
 import { trustIndicators } from "@/data/home/hero";
 import { getWhatsAppLink } from "@/lib/utils";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 export function HeroSection() {
   const t = useTranslations("HomePage");
@@ -12,15 +13,18 @@ export function HeroSection() {
       className="relative pt-20 pb-32 overflow-hidden"
       aria-labelledby="hero-title"
     >
-      {/* Decorative Background Elements */}
-      <div
-        className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl"
-        aria-hidden="true"
-      />
-      <div
-        className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-foreground/5 rounded-full blur-3xl"
-        aria-hidden="true"
-      />
+      {/* Background Image */}
+      <div className="absolute inset-0 w-full h-full">
+        <Image
+          src="/banner.png"
+          alt="Fresh vegetables and healthy food ingredients"
+          fill
+          className="object-cover object-right md:object-center"
+          priority
+        />
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-background/80" />
+      </div>
 
       <div className="container mx-auto px-6 relative z-10 text-center">
         <div className="max-w-4xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-1000">
